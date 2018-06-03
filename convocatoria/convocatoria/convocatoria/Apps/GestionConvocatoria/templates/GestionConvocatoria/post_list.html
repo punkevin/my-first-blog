@@ -12,7 +12,8 @@
             <div>
             <p>Numero Convocatoria: {{ conv.NroConv }}</p>
             <p>Fecha de Publicación: {{ conv.FecPubli }}</p>
-            <h1><a href="">{{ conv.CodObjC }}</a></h1>
+            <h1><a href="{% url 'conv_detail' pk=conv.pk %}">{{ conv.CodObjC }}</a></h1>
+            <!--<h1><a href="">{{ conv.CodObjC }}</a></h1>-->
             <p>{{ conv.DescObjeto|linebreaksbr }}</p>
             </div>
               {% endfor %}

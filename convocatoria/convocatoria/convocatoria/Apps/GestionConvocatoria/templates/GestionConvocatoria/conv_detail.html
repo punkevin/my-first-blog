@@ -1,0 +1,22 @@
+<html>
+        <head>
+            <title>Django Girls blog</title>
+        </head>
+        <body>
+
+            <div>
+              <h1><a href="/">Django Girls Blog</a></h1>
+            </div>
+
+
+            <div>
+            <h1>Numero Convocatoria: {{ convocatorias.NroConv }}</h1>
+            <p>Fecha de Publicación: {{ convocatorias.FecPubli }}</p>
+            <p>Código Objeto: {{ convocatorias.CodObjC }}</p>
+            <!--<h1><a href="">{{ conv.CodObjC }}</a></h1>-->
+            <p>{{ convocatorias.DescObjeto|linebreaksbr }}</p>
+            </div>
+
+
+        </body>
+</html>
