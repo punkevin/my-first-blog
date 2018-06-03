@@ -10,13 +10,21 @@
 
               {% for conv in convocatorias %}
             <div>
-            <p>Numero Convocatoria: {{ conv.NroConv }}</p>
+
+            <h3><a href="{% url 'conv_detail' pk=conv.pk %}">Número Convocatoria: {{ conv.NroConv }}</a></h3>
             <p>Fecha de Publicación: {{ conv.FecPubli }}</p>
-            <h1><a href="{% url 'conv_detail' pk=conv.pk %}">{{ conv.CodObjC }}</a></h1>
+            <p>Código Objeto: {{ conv.CodObjC }}</p>
             <!--<h1><a href="">{{ conv.CodObjC }}</a></h1>-->
             <p>{{ conv.DescObjeto|linebreaksbr }}</p>
             </div>
+            <div>
+                <a class="btn btn-default" href="{% url 'conv_edit' pk=conv.pk %}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
+            </div>
               {% endfor %}
+            <div class="page-header">
+                <a href="{% url 'conv_new' %}" class="top-menu">Nueva Convocatoria<span class="glyphicon glyphicon-plus"></span></a>
+                <!--<h1><a href="/">Django Girls Blog</a></h1>-->
+            </div>
 
             <!--{{ convocatorias }}
             {% for conv in convocatorias %}
